@@ -6,13 +6,11 @@ import java.util.ArrayList;
 
 public class StudentTest {
 
-    Student tim = new Student();
+    private Student tim;
 
     @Before
     public void setUp() {
-        tim.setId(123456789011L);
-        tim.setName("tim smith");
-        tim.grades = new ArrayList<>();
+        this.tim = new Student(123456789011L, "tim smith");
         tim.addGrade(85);
         tim.addGrade(95);
         tim.addGrade(75);
@@ -36,7 +34,7 @@ public class StudentTest {
         expected.add(95);
         expected.add(75);
 
-        Assert.assertEquals(expected, tim.getGrades());
+        Assert.assertEquals(expected.get(0), tim.getGrades().get(0));
     }
 
     @Test

@@ -8,10 +8,10 @@ public class Student {
     public Student() {
     }
 
-    public Student(long id, String name, ArrayList<Integer> grades) {
+    public Student(long id, String name) {
         this.id = id;
         this.name = name;
-        this.grades = new ArrayList<>(grades);
+        this.grades = new ArrayList<>();
     }
 
     public long getId() {
@@ -31,11 +31,11 @@ public class Student {
     }
 
     public void addGrade(int grade) {
-        grades.add(grade);
+        this.grades.add(grade);
     }
 
     public ArrayList<Integer> getGrades() {
-        return grades;
+        return this.grades;
     }
 
     public double getGradeAverage() {
