@@ -11,7 +11,7 @@ public class Student {
     public Student(long id, String name, ArrayList<Integer> grades) {
         this.id = id;
         this.name = name;
-        this.grades = grades;
+        this.grades = new ArrayList<>(grades);
     }
 
     public long getId() {
